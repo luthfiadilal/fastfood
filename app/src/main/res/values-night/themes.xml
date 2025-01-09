@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FastFood" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOutline">@color/primary</item>
+        <item name="colorSurface">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/primary_dark</item>
+        <item name="colorOnPrimaryContainer">@color/primary_dark</item>
+    </style>
+</resources>

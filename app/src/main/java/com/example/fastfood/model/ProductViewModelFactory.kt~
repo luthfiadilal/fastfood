@@ -1,0 +1,21 @@
+package com.example.fastfood.model
+
+import android.content.Context
+import androidx.lifecycle.ViewModelProvider
+import com.example.fastfood.Remote.ProductRepository
+import com.example.fastfood.Remote.UserRepository
+
+class ProductViewModelFactory(private val repository: ProductRepository) : ViewModelProvider.Factory {
+
+    companion object {
+        @Volatile
+        private var INSTANCE: ViewModelFactory? = null
+
+        fun getInstance(context: Context): ViewModelFactory {
+            return INSTANCE ?: synchronized(this) {
+                INSTANCE ?: ViewModelFactory(ProductRepository.getInstance(context)).also { INSTANCE = it }
+            }
+        }
+
+    }
+}
